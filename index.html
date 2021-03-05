@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>JS particles</title>
+
+        <!-- Icon -->
+        <link rel="icon" href="./imgs/favicon.ico">
+
+        <!-- Style -->
+        <link rel="stylesheet" href="./css/style.css">
+
+        <!-- Font awesome -->
+        <link rel="stylesheet" href="./css/font-awesome/all.min.css">
+        <link rel="stylesheet" href="./css/font-awesome/font-awesome.min.css">
+    </head>
+
+    <body>
+        <canvas id="canvas"></canvas>
+        <button id="optionsButton" class="btn" title="Options" onclick="toggleOptions()"><i class="fa fa-cog"></i></button>
+        <a href="https://github.com/Rilegis/ParticlesAnimation" target="blank">
+            <button id="sourceCodeButton" class="btn btn-source" title="View source code!"><i class="fa fa-code"></i></button>
+        </a>
+
+        <div class="optionsTab" id="optionsTab">
+            <div>
+                <div class="sliderContainer">
+                    <input type="range" min="1" max="60" value="25" class="slider" id="fpsSlider" onchange="onValueChange()">
+                    <span> FPS: </span><span id="fpsValue"></span>
+                </div>
+            </div>
+            
+            <div>
+                <div class="sliderContainer">
+                    <input type="range" min="1" max="250" value="100" class="slider" id="particlesSlider" onchange="onValueChange()">
+                    <span> Particles: </span><span id="particlesAmount"></span>
+                </div>
+            </div>
+            
+            <div>
+                <div class="sliderContainer">
+                    <input type="range" min="0" max="10" value="1" class="slider" id="speedSlider" onchange="onValueChange()">
+                    <span> Speed multiplier: </span><span id="speedValue"></span>
+                </div>
+            </div>
+            
+            <div>
+                <div class="sliderContainer">
+                    <input type="range" min="1" max="50" value="3" class="slider" id="radiusSlider" onchange="onValueChange()">
+                    <span> Points radius: </span><span id="radiusValue"></span>
+                </div>
+            </div>
+            
+            <div>
+                <div class="sliderContainer">
+                    <input type="range" min="1" max="200" value="4" class="slider" id="linesWidthSlider" onchange="onValueChange()">
+                    <span> Lines width: </span><span id="linesWidthValue"></span>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <!-- Scripts -->
+    <script src="./js/optionsButton.js"></script>
+    <script src="./js/sliders.js"></script>
+    <script src="./js/animator.js"></script>
+</html>
